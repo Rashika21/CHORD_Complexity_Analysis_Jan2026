@@ -4,7 +4,7 @@
 
 A clean, modular Python framework for analyzing and visualizing UAV design networks with complexity metrics.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 organized_uav_analysis/
@@ -25,7 +25,7 @@ organized_uav_analysis/
 └── README.md                          # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -51,7 +51,7 @@ Run each block in order. The notebook will:
 - Calculate complexity metrics
 - Save all plots automatically
 
-## 📊 Analysis Pipeline
+## Analysis Pipeline
 
 ### Block 1: Setup
 - Initialize environment
@@ -112,7 +112,7 @@ Run each block in order. The notebook will:
 - Grid of individual plots
 - Grouped by complexity level
 
-## 🔧 Module Overview
+## Module Overview
 
 ### `config.py`
 Central configuration for paths, colors, and settings. Modify this file to change:
@@ -172,7 +172,7 @@ box_data, labels, stats = complexity_box_violin_plot.prepare_box_plot_data(resul
 fig = complexity_box_violin_plot.plot_violin_with_box(box_data, labels, stats)
 ```
 
-## 📈 Output
+## Output
 
 All plots are automatically saved to `plots/` directory in:
 - **PNG** format (600 DPI, high resolution)
@@ -180,7 +180,7 @@ All plots are automatically saved to `plots/` directory in:
 
 Files are date-stamped for version control.
 
-## 🎨 Customization
+## Customization
 
 ### Change Plot Settings
 Edit `modules/config.py`:
@@ -209,7 +209,7 @@ from modules import config
 config.update_plots_dir('/path/to/new/directory')
 ```
 
-## 🧪 Testing Modules
+## Testing Modules
 
 Each module can be tested independently:
 
@@ -224,75 +224,4 @@ python -m modules.geometry_parser
 python -m modules.complexity_analyzer
 ```
 
-## 📝 Adding New Analysis
 
-To add new analysis:
-
-1. **Create new module** in `modules/`
-2. **Import in main notebook**
-3. **Add new block** to notebook
-
-Example:
-```python
-# modules/my_new_analysis.py
-def my_analysis_function(data):
-    # Your analysis here
-    return results
-```
-
-Then in notebook:
-```python
-from modules import my_new_analysis
-results = my_new_analysis.my_analysis_function(all_designs_data)
-```
-
-## 🔬 References
-
-Complexity analysis based on:
-> Sinha, K., & de Weck, O. L. (2020). Structural complexity and its implications for design of cyber-physical system architectures. *Royal Society Open Science*, 7(3), 200895.
-
-## 🐛 Troubleshooting
-
-### Module Not Found Error
-```python
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path.cwd() / 'modules'))
-```
-
-### Plot Not Saving
-Check that `plots/` directory exists and is writable:
-```python
-from modules import config
-config.get_plots_dir()  # Creates directory if needed
-```
-
-### STL Files Not Loading
-Verify data path in `modules/config.py`:
-```python
-DATA_ROOT = Path("your/path/to/data")
-```
-
-## 📧 Support
-
-For issues or questions, check:
-1. Module docstrings (`help(module_name)`)
-2. Config settings (`config.print_config()`)
-3. Error messages and tracebacks
-
-## ✨ Features
-
-- ✅ Modular, reusable code
-- ✅ Clean separation of concerns
-- ✅ Easy to extend and customize
-- ✅ Automatic plot saving
-- ✅ High-resolution outputs
-- ✅ Comprehensive documentation
-- ✅ Error-free execution
-- ✅ Publication-ready plots
-
----
-
-**Version:** 1.0.0  
-**Last Updated:** 2026-01-20  
-**Author:** Research Team
