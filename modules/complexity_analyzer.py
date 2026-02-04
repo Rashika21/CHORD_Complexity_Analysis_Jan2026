@@ -203,7 +203,7 @@ def analyze_design_complexity(all_designs_data, verbose=True):
         print("\n" + "=" * 80)
         print("NODE COMPLEXITY ANALYSIS")
         print("=" * 80)
-        print("Reference: Rebout et.al and De Wecl - Structural Complexity Analysis")
+        print("Reference: Rebout et.al and De Weck - Structural Complexity Analysis")
         print("=" * 80)
     
     results = {}
